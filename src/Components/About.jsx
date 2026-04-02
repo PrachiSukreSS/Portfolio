@@ -13,8 +13,8 @@ const About = () => (
           <h3 className="text-2xl font-bold text-white mb-6">My Journey</h3>
           <p className="text-gray-300 leading-relaxed mb-6">
             I'm a Computer Engineering student at JSPM's Rajarshi Shahu College
-            of Engineering, Pune, with a strong passion for web development and
-            automation. With a CGPA of 9.27, I'm actively involved in
+            of Engineering, Pune, with a strong passion for web development, DevOps, and
+            automation. With a CGPA of 9.38, I'm actively involved in
             college-level coding initiatives and team-based projects.
           </p>
           <p className="text-gray-300 leading-relaxed mb-6">
@@ -52,7 +52,7 @@ const About = () => (
               JSPM's Rajarshi Shahu College of Engineering, Pune
             </p>
             <p className="text-cyan-400 font-semibold">
-              CGPA: 9.27 | 2023-2027
+              CGPA: 9.38 | 2023-2027
             </p>
           </GlassmorphismCard>
           <GlassmorphismCard className="p-6">
@@ -64,7 +64,7 @@ const About = () => (
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
-              {["Hindi", "English", "Marathi", "Japanese (Basic)"].map(
+              {["Hindi", "English", "Marathi", "Japanese (JLPT N5)"].map(
                 (lang, index) => (
                   <span
                     key={index}
@@ -85,9 +85,11 @@ const About = () => (
               </div>
             </div>
             <p className="text-gray-300">
-              Second Runner-up in Sci-Tech Competition
+              Aviatrix Certified Multicloud Network Associate
             </p>
-            <p className="text-gray-300">AWS Hands-on Workshop Certificate</p>
+            <p className="text-gray-300">LFEL1009: Getting Started with OpenTofu</p>
+            <p className="text-gray-300">JLPT N5 Certified</p>
+            <p className="text-gray-300">AWS Hands-on Workshop</p>
           </GlassmorphismCard>
         </div>
       </div>

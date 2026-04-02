@@ -1,6 +1,45 @@
 // Experience.jsx
-import { Code, Users } from "lucide-react";
+import { Code, Users, Server, Briefcase } from "lucide-react";
 import GlassmorphismCard from "../Components/GlassmorphismCard";
+
+const experiences = [
+  {
+    role: "DevOps Lead",
+    company: "Coding Club, RSCOE",
+    duration: "Aug 2025 - Present",
+    description: "Set up CI/CD pipelines to automate build and deployment workflows. Wrote Python automation scripts for operational tasks and system monitoring. Managed Linux environments and version control using Git.",
+    icon: Server,
+    color: "text-green-400",
+    bgColor: "bg-green-400"
+  },
+  {
+    role: "Full Stack Developer Intern",
+    company: "EduSkills Academy",
+    duration: "Apr 2025 - Jun 2025",
+    description: "Developed MERN stack applications with API integration and database connectivity. Assisted in debugging, testing, and deployment of web applications.",
+    icon: Briefcase,
+    color: "text-yellow-400",
+    bgColor: "bg-yellow-400"
+  },
+  {
+    role: "Web Team Member",
+    company: "Coding Club, RSCOE",
+    duration: "Oct 2024 - Dec 2025",
+    description: "Contributed to development of coding club website using React and REST APIs with a space-themed UI. Assisted in developing an admin panel and integrating APIs.",
+    icon: Code,
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-400"
+  },
+  {
+    role: "Event Management Team",
+    company: "Coding Club, RSCOE",
+    duration: "Jul 2024 - Oct 2024",
+    description: "Worked on an automation project for checking location availability for conducting events. Streamlined event management processes and improved operational efficiency.",
+    icon: Users,
+    color: "text-purple-400",
+    bgColor: "bg-purple-400"
+  }
+];
 
 const Experience = () => (
   <section id="experience" className="py-20 px-4 relative">
@@ -11,56 +50,46 @@ const Experience = () => (
       <div className="relative">
         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-purple-600 rounded-full"></div>
         <div className="space-y-12">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2 md:text-right">
-              <GlassmorphismCard className="p-6">
-                <div className="flex items-center gap-3 mb-4 md:justify-end">
-                  <Code className="w-6 h-6 text-cyan-400" />
-                  <h3 className="text-xl font-bold text-white">
-                    Web Team Member
-                  </h3>
-                </div>
-                <p className="text-cyan-400 font-semibold mb-2">
-                  Coding Club, RSCOE
-                </p>
-                <p className="text-gray-400 text-sm mb-4">
-                  July 2024 - Present
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Collaborated on developing the club's official website using
-                  ReactJS with a space-themed UI. Assisted in the development of
-                  an admin panel and integrated APIs for enhanced functionality.
-                </p>
-              </GlassmorphismCard>
-            </div>
-            <div className="w-8 h-8 bg-cyan-400 rounded-full border-4 border-slate-900 z-10 flex-shrink-0"></div>
-            <div className="md:w-1/2"></div>
-          </div>
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2"></div>
-            <div className="w-8 h-8 bg-purple-400 rounded-full border-4 border-slate-900 z-10 flex-shrink-0"></div>
-            <div className="md:w-1/2">
-              <GlassmorphismCard className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Users className="w-6 h-6 text-purple-400" />
-                  <h3 className="text-xl font-bold text-white">
-                    Event Management Team
-                  </h3>
-                </div>
-                <p className="text-purple-400 font-semibold mb-2">
-                  Coding Club, RSCOE
-                </p>
-                <p className="text-gray-400 text-sm mb-4">
-                  July 2024 - July 2025
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Worked on automation project for checking location
-                  availability for conducting events. Streamlined event
-                  management processes and improved operational efficiency.
-                </p>
-              </GlassmorphismCard>
-            </div>
-          </div>
+          {experiences.map((exp, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <div key={index} className="flex flex-col md:flex-row items-center gap-8">
+                {isEven ? (
+                  <>
+                    <div className="md:w-1/2 md:text-right">
+                      <GlassmorphismCard className="p-6">
+                        <div className="flex items-center gap-3 mb-4 md:justify-end">
+                          <exp.icon className={`w-6 h-6 ${exp.color}`} />
+                          <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                        </div>
+                        <p className={`${exp.color} font-semibold mb-2`}>{exp.company}</p>
+                        <p className="text-gray-400 text-sm mb-4">{exp.duration}</p>
+                        <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                      </GlassmorphismCard>
+                    </div>
+                    <div className={`w-8 h-8 ${exp.bgColor} rounded-full border-4 border-slate-900 z-10 flex-shrink-0`}></div>
+                    <div className="md:w-1/2"></div>
+                  </>
+                ) : (
+                  <>
+                    <div className="md:w-1/2"></div>
+                    <div className={`w-8 h-8 ${exp.bgColor} rounded-full border-4 border-slate-900 z-10 flex-shrink-0`}></div>
+                    <div className="md:w-1/2">
+                      <GlassmorphismCard className="p-6">
+                        <div className="flex items-center gap-3 mb-4">
+                          <exp.icon className={`w-6 h-6 ${exp.color}`} />
+                          <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                        </div>
+                        <p className={`${exp.color} font-semibold mb-2`}>{exp.company}</p>
+                        <p className="text-gray-400 text-sm mb-4">{exp.duration}</p>
+                        <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                      </GlassmorphismCard>
+                    </div>
+                  </>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

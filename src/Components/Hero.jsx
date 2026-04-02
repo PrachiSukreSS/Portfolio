@@ -31,16 +31,16 @@ const Hero = () => (
       <AnimatedText
         text={
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Computer Engineering Student & Full Stack Developer
+            Computer Engineering Student | DevOps & Full Stack Developer
           </p>
         }
       />
       <AnimatedText
         text={
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Passionate about creating innovative web solutions and exploring
-            cutting-edge technologies. Currently pursuing B.Tech in Computer
-            Engineering with a focus on MERN stack development.
+            Passionate about creating innovative web solutions, exploring
+            cutting-edge automation, and implementing robust CI/CD pipelines. Currently pursuing B.Tech in Computer
+            Engineering with a focus on Full Stack development and DevOps.
           </p>
         }
       />

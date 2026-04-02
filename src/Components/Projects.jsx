@@ -5,35 +5,35 @@ import GlassmorphismCard from "./GlassmorphismCard"; // Adjust path if needed
 const Projects = () => {
   const projects = [
     {
-      title: "Art Gallery Management System",
+      title: "PathGenie",
       description:
-        "A comprehensive web application built with MERN stack to manage artworks, artists, and exhibitions with modern UI/UX design.",
-      tech: ["React.js", "Node.js", "MongoDB", "TailwindCSS"],
-      icon: <Palette className="w-8 h-8" />,
+        "Full-stack learning platform that generates personalized learning paths. Integrates FastAPI backend with MongoDB and automated skill analysis logic.",
+      tech: ["React", "FastAPI", "MongoDB"],
+      icon: <Zap className="w-8 h-8" />,
       color: "from-pink-500 to-rose-500",
     },
     {
-      title: "Coding Club Website",
+      title: "Email Automation System",
       description:
-        "Space-themed website for college coding club featuring landing page, about section, and admin dashboard with modern animations.",
-      tech: ["React.js", "TailwindCSS", "JavaScript"],
-      icon: <Code className="w-8 h-8" />,
+        "Automation system processing user data to send personalized emails with certificate attachments. Features batching, retry logic, and error handling.",
+      tech: ["Python", "SMTP", "Automation"],
+      icon: <Mail className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "Event Location Automation",
+      title: "Lab Availability Check System",
       description:
-        "Python-based automation system to track event locations, reducing manual work and improving accuracy for event management.",
-      tech: ["Python", "Automation", "APIs"],
-      icon: <Zap className="w-8 h-8" />,
+        "Backend API service to automate checking lab availability for event scheduling, with time-slot validation and conflict detection.",
+      tech: ["Python", "FastAPI", "APIs"],
+      icon: <Code className="w-8 h-8" />,
       color: "from-yellow-500 to-orange-500",
     },
     {
-      title: "Email Notification System",
+      title: "Flask Web App Deployment",
       description:
-        "Automated email system for event notifications with tracking capabilities to ensure reliable communication.",
-      tech: ["Python", "Email APIs", "Automation"],
-      icon: <Mail className="w-8 h-8" />,
+        "Python Flask web application deployed using GitLab for version control and robust CI/CD pipeline automation.",
+      tech: ["Flask", "GitLab CI/CD", "Render"],
+      icon: <ExternalLink className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
     },
   ];

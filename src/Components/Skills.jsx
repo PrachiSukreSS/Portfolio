@@ -12,7 +12,7 @@ const Skills = () => {
     {
       title: "Backend Development",
       icon: <Database className="w-8 h-8 text-purple-400" />,
-      skills: ["Node.js", "Express.js", "MongoDB", "MySQL"],
+      skills: ["Node.js", "FastAPI", "MongoDB", "MySQL", "SQL"],
       color: "from-purple-400 to-pink-500",
     },
     {
@@ -22,9 +22,9 @@ const Skills = () => {
       color: "from-green-400 to-emerald-500",
     },
     {
-      title: "Tools & Technologies",
+      title: "DevOps & Tools",
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      skills: ["Git", "GitHub", "VS Code", "Postman", "Figma", "Selenium"],
+      skills: ["Docker", "GitHub Actions", "Linux", "AWS", "Git"],
       color: "from-yellow-400 to-orange-500",
     },
   ];
