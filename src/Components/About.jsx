@@ -5,7 +5,7 @@ import GlassmorphismCard from "../Components/GlassmorphismCard";
 const About = () => (
   <section id="about" className="py-20 px-4 relative">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+      <h2 className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent tracking-tight">
         About Me
       </h2>
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -32,7 +32,7 @@ const About = () => (
             ].map((trait, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm"
+                className="px-4 py-1.5 bg-violet-500/20 text-violet-300 border border-violet-500/30 rounded-full text-sm font-medium tracking-wide"
               >
                 {trait}
               </span>
@@ -42,25 +42,25 @@ const About = () => (
         <div className="space-y-6">
           <GlassmorphismCard className="p-6">
             <div className="flex items-center gap-4 mb-4">
-              <BookOpen className="w-8 h-8 text-cyan-400" />
+              <BookOpen className="w-8 h-8 text-fuchsia-400" />
               <div>
                 <h3 className="text-xl font-bold text-white">Education</h3>
-                <p className="text-gray-400">B.Tech Computer Engineering</p>
+                <p className="text-violet-200">B.Tech Computer Engineering</p>
               </div>
             </div>
             <p className="text-gray-300">
               JSPM's Rajarshi Shahu College of Engineering, Pune
             </p>
-            <p className="text-cyan-400 font-semibold">
+            <p className="text-fuchsia-400 font-semibold tracking-wide">
               CGPA: 9.38 | 2023-2027
             </p>
           </GlassmorphismCard>
           <GlassmorphismCard className="p-6">
             <div className="flex items-center gap-4 mb-4">
-              <Globe className="w-8 h-8 text-purple-400" />
+              <Globe className="w-8 h-8 text-violet-400" />
               <div>
                 <h3 className="text-xl font-bold text-white">Languages</h3>
-                <p className="text-gray-400">Multilingual Communication</p>
+                <p className="text-violet-200">Multilingual Communication</p>
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ const About = () => (
                 (lang, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm"
+                    className="px-4 py-1.5 bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30 rounded-full text-sm font-medium tracking-wide"
                   >
                     {lang}
                   </span>
@@ -78,10 +78,10 @@ const About = () => (
           </GlassmorphismCard>
           <GlassmorphismCard className="p-6">
             <div className="flex items-center gap-4 mb-4">
-              <Award className="w-8 h-8 text-green-400" />
+              <Award className="w-8 h-8 text-indigo-400" />
               <div>
                 <h3 className="text-xl font-bold text-white">Achievements</h3>
-                <p className="text-gray-400">Recognition & Certifications</p>
+                <p className="text-violet-200">Recognition & Certifications</p>
               </div>
             </div>
             <p className="text-gray-300">

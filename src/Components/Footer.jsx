@@ -3,13 +3,13 @@ import React from "react";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Footer = () => (
-  <footer className="py-12 border-t border-white/10 bg-gray-900">
+  <footer className="py-12 border-t border-violet-500/20 bg-transparent">
     <div className="max-w-6xl mx-auto px-4 text-center">
       <div className="mb-8">
-        <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent mb-4">
+        <h3 className="text-2xl font-black bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent mb-4 tracking-tight">
           Prachi Sukre
         </h3>
-        <p className="text-gray-400">
+        <p className="text-violet-300">
           Building innovative solutions with passion and precision
         </p>
       </div>
@@ -19,7 +19,7 @@ const Footer = () => (
           href="https://www.linkedin.com/in/prachisukre"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-cyan-400 transition-colors text-2xl"
+          className="text-violet-300 hover:text-fuchsia-400 transition-colors text-2xl"
           aria-label="LinkedIn"
         >
           <FaLinkedin />
@@ -28,7 +28,7 @@ const Footer = () => (
           href="https://github.com/prachisukre"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-purple-500 transition-colors text-2xl"
+          className="text-violet-300 hover:text-fuchsia-400 transition-colors text-2xl"
           aria-label="GitHub"
         >
           <FaGithub />
@@ -37,14 +37,14 @@ const Footer = () => (
           href="https://twitter.com/prachisukre"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-blue-400 transition-colors text-2xl"
+          className="text-violet-300 hover:text-fuchsia-400 transition-colors text-2xl"
           aria-label="Twitter"
         >
           <FaTwitter />
         </a>
       </div>
 
-      <div className="text-gray-500 text-sm">
+      <div className="text-violet-400/50 text-sm">
         © {new Date().getFullYear()} Prachi Sukre. All rights reserved.
       </div>
     </div>

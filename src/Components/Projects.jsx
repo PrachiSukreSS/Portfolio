@@ -1,6 +1,6 @@
 import React from "react";
-import { Palette, Code, Zap, Mail, Github, ExternalLink } from "lucide-react";
-import GlassmorphismCard from "./GlassmorphismCard"; // Adjust path if needed
+import { Zap, Mail, Code, ExternalLink, Github } from "lucide-react";
+import GlassmorphismCard from "./GlassmorphismCard";
 
 const Projects = () => {
   const projects = [
@@ -10,7 +10,8 @@ const Projects = () => {
         "Full-stack learning platform that generates personalized learning paths. Integrates FastAPI backend with MongoDB and automated skill analysis logic.",
       tech: ["React", "FastAPI", "MongoDB"],
       icon: <Zap className="w-8 h-8" />,
-      color: "from-pink-500 to-rose-500",
+      color: "from-violet-500 to-fuchsia-500",
+      shadow: "shadow-[0_0_20px_rgba(139,92,246,0.5)]"
     },
     {
       title: "Email Automation System",
@@ -18,7 +19,8 @@ const Projects = () => {
         "Automation system processing user data to send personalized emails with certificate attachments. Features batching, retry logic, and error handling.",
       tech: ["Python", "SMTP", "Automation"],
       icon: <Mail className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500",
+      color: "from-fuchsia-500 to-pink-500",
+      shadow: "shadow-[0_0_20px_rgba(217,70,239,0.5)]"
     },
     {
       title: "Lab Availability Check System",
@@ -26,7 +28,8 @@ const Projects = () => {
         "Backend API service to automate checking lab availability for event scheduling, with time-slot validation and conflict detection.",
       tech: ["Python", "FastAPI", "APIs"],
       icon: <Code className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
+      color: "from-indigo-500 to-violet-500",
+      shadow: "shadow-[0_0_20px_rgba(99,102,241,0.5)]"
     },
     {
       title: "Flask Web App Deployment",
@@ -34,14 +37,15 @@ const Projects = () => {
         "Python Flask web application deployed using GitLab for version control and robust CI/CD pipeline automation.",
       tech: ["Flask", "GitLab CI/CD", "Render"],
       icon: <ExternalLink className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
+      color: "from-purple-500 to-indigo-500",
+      shadow: "shadow-[0_0_20px_rgba(168,85,247,0.5)]"
     },
   ];
 
   return (
     <section id="projects" className="py-20 px-4 relative">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-indigo-400 via-indigo-300 to-slate-400 bg-clip-text text-transparent tracking-tight">
           Featured Projects
         </h2>
 
@@ -49,10 +53,10 @@ const Projects = () => {
           {projects.map((project, index) => (
             <GlassmorphismCard
               key={index}
-              className="p-8 group hover:scale-105 transition-all duration-300"
+              className="p-8 group"
             >
               <div
-                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300`}
+                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.color} ${project.shadow} flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300`}
               >
                 {project.icon}
               </div>
@@ -60,7 +64,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-white mb-4">
                 {project.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-slate-300 leading-relaxed mb-6">
                 {project.description}
               </p>
 
@@ -68,7 +72,7 @@ const Projects = () => {
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-sm"
+                    className="px-4 py-1.5 bg-white/5 border border-white/10 text-slate-300 rounded-full text-sm font-medium tracking-wide"
                   >
                     {tech}
                   </span>
@@ -76,13 +80,15 @@ const Projects = () => {
               </div>
 
               <div className="flex gap-4">
-                <button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:scale-105 transition-transform duration-300">
-                  <ExternalLink className="w-4 h-4" />
-                  View Project
+                <button className="relative overflow-hidden group flex items-center gap-2 px-5 py-2.5 bg-indigo-600/80 text-white rounded-xl shadow-[0_4px_15px_rgba(99,102,241,0.2)] hover:shadow-[0_6px_20px_rgba(99,102,241,0.4)] transform transition-all duration-300 font-semibold border border-indigo-400/30">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
+                  <ExternalLink className="w-4 h-4 relative z-10" />
+                  <span className="relative z-10">View Project</span>
                 </button>
-                <button className="flex items-center gap-2 px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-600 transition-colors duration-300">
-                  <Github className="w-4 h-4" />
-                  Code
+                <button className="flex items-center gap-2 px-5 py-2.5 border border-indigo-500/30 bg-[#1f2833]/50 text-indigo-200 rounded-xl hover:bg-indigo-500/20 hover:border-indigo-400 transition-all duration-300 font-semibold group">
+                  <span className="absolute inset-0 rounded-xl ring-2 ring-indigo-400/50 scale-110 opacity-0 group-hover:animate-ping" />
+                  <Github className="w-4 h-4 relative z-10" />
+                  <span className="relative z-10">Code</span>
                 </button>
               </div>
             </GlassmorphismCard>
@@ -94,10 +100,11 @@ const Projects = () => {
             href="https://github.com/PrachiSukreSS"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#1f2833]/50 border border-indigo-400/30 text-indigo-300 rounded-full font-bold hover:bg-indigo-500/20 hover:text-indigo-200 hover:border-indigo-400 transition-all duration-300 relative group overflow-hidden"
           >
-            <Github className="w-5 h-5" />
-            View All Projects on GitHub
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
+            <Github className="w-5 h-5 relative z-10" />
+            <span className="relative z-10">View All Projects on GitHub</span>
           </a>
         </div>
       </div>

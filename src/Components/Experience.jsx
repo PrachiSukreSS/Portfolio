@@ -9,8 +9,8 @@ const experiences = [
     duration: "Aug 2025 - Present",
     description: "Set up CI/CD pipelines to automate build and deployment workflows. Wrote Python automation scripts for operational tasks and system monitoring. Managed Linux environments and version control using Git.",
     icon: Server,
-    color: "text-green-400",
-    bgColor: "bg-green-400"
+    color: "text-violet-400",
+    bgColor: "bg-violet-400"
   },
   {
     role: "Full Stack Developer Intern",
@@ -18,8 +18,8 @@ const experiences = [
     duration: "Apr 2025 - Jun 2025",
     description: "Developed MERN stack applications with API integration and database connectivity. Assisted in debugging, testing, and deployment of web applications.",
     icon: Briefcase,
-    color: "text-yellow-400",
-    bgColor: "bg-yellow-400"
+    color: "text-fuchsia-400",
+    bgColor: "bg-fuchsia-400"
   },
   {
     role: "Web Team Member",
@@ -27,8 +27,8 @@ const experiences = [
     duration: "Oct 2024 - Dec 2025",
     description: "Contributed to development of coding club website using React and REST APIs with a space-themed UI. Assisted in developing an admin panel and integrating APIs.",
     icon: Code,
-    color: "text-cyan-400",
-    bgColor: "bg-cyan-400"
+    color: "text-indigo-400",
+    bgColor: "bg-indigo-400"
   },
   {
     role: "Event Management Team",
@@ -36,19 +36,19 @@ const experiences = [
     duration: "Jul 2024 - Oct 2024",
     description: "Worked on an automation project for checking location availability for conducting events. Streamlined event management processes and improved operational efficiency.",
     icon: Users,
-    color: "text-purple-400",
-    bgColor: "bg-purple-400"
+    color: "text-violet-300",
+    bgColor: "bg-violet-300"
   }
 ];
 
 const Experience = () => (
   <section id="experience" className="py-20 px-4 relative">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+      <h2 className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent tracking-tight">
         Experience
       </h2>
       <div className="relative">
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-purple-600 rounded-full"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-violet-500 to-fuchsia-600 rounded-full opacity-50"></div>
         <div className="space-y-12">
           {experiences.map((exp, index) => {
             const isEven = index % 2 === 0;

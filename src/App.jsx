@@ -11,7 +11,7 @@ import Navigation from "./Components/Navigation"; // 🚀 Floating side nav or b
 
 const App = () => {
   return (
-    <div className="relative bg-slate-900 text-white font-sans overflow-x-hidden">
+    <div className="relative bg-[#0b0c10] text-[#c5c6c7] font-sans overflow-x-hidden selection:bg-indigo-500/30 selection:text-indigo-200 min-h-screen">
       {/* Floating background particles */}
       <FloatingParticles /> {/* 🪄✨ should stay behind everything */}
       {/* Floating Navigation Buttons */}
