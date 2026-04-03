@@ -12,42 +12,34 @@ const Navigation = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl"
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[85%] max-w-3xl"
     >
-      <div className="backdrop-blur-xl bg-[#1a103c]/70 border border-violet-500/20 shadow-[0_8px_32px_0_rgba(100,90,200,0.2)] rounded-full px-6 py-3 transition-all duration-300">
-        <div className="flex items-center justify-between">
-          <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="text-2xl font-black bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent cursor-pointer"
-            onClick={() => scrollToSection("home")}
-          >
-            PS
-          </motion.div>
-
+      <div className="backdrop-blur-xl bg-white/[0.03] border border-white/10 shadow-2xl ring-1 ring-white/5 rounded-full px-1 py-0.5 transition-all duration-300">
+        <div className="flex items-center justify-center w-full">
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-1 bg-white/5 rounded-full px-2 py-1">
+          <div className="hidden md:flex space-x-4 w-full justify-center px-1 py-1">
             {navItems.map((item) => (
               <motion.button
                 key={item}
-                whileHover={{ scale: 1.05, backgroundColor: "rgba(139, 92, 246, 0.2)" }}
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(14, 165, 233, 0.2)" }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="px-4 py-2 rounded-full text-violet-100 hover:text-fuchsia-300 transition-colors duration-300 text-sm font-semibold tracking-wide"
+                className="px-4 py-2 rounded-full text-slate-300 hover:text-sky-300 transition-colors duration-300 text-base font-bold tracking-wide"
               >
                 {item}
               </motion.button>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Centered but relative positioned for mobile display */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-violet-200 hover:text-fuchsia-400 transition-colors duration-300 z-50 p-2"
+            className="md:hidden text-slate-300 hover:text-sky-400 transition-colors duration-300 z-50 p-3 mx-auto"
           >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2.5" : ""}`} />
+            <div className="w-8 h-6 flex flex-col justify-between items-center">
+              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-[11px]" : ""}`} />
               <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`} />
-              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-[10px]" : ""}`} />
             </div>
           </button>
         </div>
@@ -59,7 +51,7 @@ const Navigation = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 overflow-hidden border-t border-violet-500/20 pt-4"
+              className="md:hidden mt-4 overflow-hidden border-t border-slate-700/50 pt-4"
             >
               <div className="flex flex-col space-y-2 pb-2">
                 {navItems.map((item) => (
@@ -70,7 +62,7 @@ const Navigation = () => {
                         scrollToSection(item.toLowerCase());
                         setIsMenuOpen(false);
                     }}
-                    className="block w-full text-left px-4 py-3 rounded-xl text-violet-200 hover:bg-violet-500/20 hover:text-fuchsia-300 transition-colors duration-300 font-medium"
+                    className="block w-full text-left px-4 py-3 rounded-xl text-slate-300 hover:bg-sky-500/20 hover:text-sky-300 transition-colors duration-300 font-medium"
                   >
                     {item}
                   </motion.button>

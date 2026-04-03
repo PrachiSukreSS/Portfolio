@@ -1,6 +1,7 @@
-// Experience.jsx
+import React from "react";
 import { Code, Users, Server, Briefcase } from "lucide-react";
 import GlassmorphismCard from "../Components/GlassmorphismCard";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -9,8 +10,8 @@ const experiences = [
     duration: "Aug 2025 - Present",
     description: "Set up CI/CD pipelines to automate build and deployment workflows. Wrote Python automation scripts for operational tasks and system monitoring. Managed Linux environments and version control using Git.",
     icon: Server,
-    color: "text-violet-400",
-    bgColor: "bg-violet-400"
+    color: "text-blue-400",
+    bgColor: "bg-blue-400"
   },
   {
     role: "Full Stack Developer Intern",
@@ -18,8 +19,8 @@ const experiences = [
     duration: "Apr 2025 - Jun 2025",
     description: "Developed MERN stack applications with API integration and database connectivity. Assisted in debugging, testing, and deployment of web applications.",
     icon: Briefcase,
-    color: "text-fuchsia-400",
-    bgColor: "bg-fuchsia-400"
+    color: "text-teal-400",
+    bgColor: "bg-teal-400"
   },
   {
     role: "Web Team Member",
@@ -27,8 +28,8 @@ const experiences = [
     duration: "Oct 2024 - Dec 2025",
     description: "Contributed to development of coding club website using React and REST APIs with a space-themed UI. Assisted in developing an admin panel and integrating APIs.",
     icon: Code,
-    color: "text-indigo-400",
-    bgColor: "bg-indigo-400"
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-400"
   },
   {
     role: "Event Management Team",
@@ -36,58 +37,101 @@ const experiences = [
     duration: "Jul 2024 - Oct 2024",
     description: "Worked on an automation project for checking location availability for conducting events. Streamlined event management processes and improved operational efficiency.",
     icon: Users,
-    color: "text-violet-300",
-    bgColor: "bg-violet-300"
+    color: "text-slate-400",
+    bgColor: "bg-slate-400"
   }
 ];
 
 const Experience = () => (
   <section id="experience" className="py-20 px-4 relative">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent tracking-tight">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent tracking-tight"
+      >
         Experience
-      </h2>
+      </motion.h2>
+
       <div className="relative">
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-violet-500 to-fuchsia-600 rounded-full opacity-50"></div>
-        <div className="space-y-12">
+        <motion.div 
+          initial={{ height: 0 }}
+          whileInView={{ height: "100%" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+          className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-sky-500 to-indigo-600 rounded-full opacity-50"
+        />
+        <div className="space-y-12 relative z-10">
           {experiences.map((exp, index) => {
             const isEven = index % 2 === 0;
             return (
-              <div key={index} className="flex flex-col md:flex-row items-center gap-8">
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ type: "spring", stiffness: 50, damping: 20, delay: 0.2 }}
+                className="flex flex-col md:flex-row items-center gap-8 group"
+              >
                 {isEven ? (
                   <>
-                    <div className="md:w-1/2 md:text-right">
-                      <GlassmorphismCard className="p-6">
-                        <div className="flex items-center gap-3 mb-4 md:justify-end">
-                          <exp.icon className={`w-6 h-6 ${exp.color}`} />
+                    <motion.div 
+                      className="md:w-1/2 md:text-right w-full"
+                      whileHover={{ scale: 1.02, rotateY: -3 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    >
+                      <GlassmorphismCard className="p-6 shadow-lg shadow-sky-500/5 group-hover:shadow-sky-500/20 transition-shadow duration-300">
+                        <div className="flex items-center gap-4 mb-5 md:justify-end">
+                          <div className={`p-2.5 rounded-xl border border-current opacity-70 ${exp.color}`}>
+                            <exp.icon className="w-5 h-5 bg-transparent" />
+                          </div>
                           <h3 className="text-xl font-bold text-white">{exp.role}</h3>
                         </div>
                         <p className={`${exp.color} font-semibold mb-2`}>{exp.company}</p>
-                        <p className="text-gray-400 text-sm mb-4">{exp.duration}</p>
-                        <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                        <p className="text-slate-400 text-sm mb-4">{exp.duration}</p>
+                        <p className="text-slate-300 leading-relaxed">{exp.description}</p>
                       </GlassmorphismCard>
-                    </div>
-                    <div className={`w-8 h-8 ${exp.bgColor} rounded-full border-4 border-slate-900 z-10 flex-shrink-0`}></div>
-                    <div className="md:w-1/2"></div>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: "spring", delay: 0.5, bounce: 0.6 }}
+                      className={`w-8 h-8 ${exp.bgColor} rounded-full border-4 border-slate-900 z-10 flex-shrink-0 shadow-[0_0_15px_rgba(56,189,248,0.5)]`}
+                    />
+                    <div className="md:w-1/2 hidden md:block"></div>
                   </>
                 ) : (
                   <>
-                    <div className="md:w-1/2"></div>
-                    <div className={`w-8 h-8 ${exp.bgColor} rounded-full border-4 border-slate-900 z-10 flex-shrink-0`}></div>
-                    <div className="md:w-1/2">
-                      <GlassmorphismCard className="p-6">
-                        <div className="flex items-center gap-3 mb-4">
-                          <exp.icon className={`w-6 h-6 ${exp.color}`} />
+                    <div className="md:w-1/2 hidden md:block"></div>
+                    <motion.div 
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: "spring", delay: 0.5, bounce: 0.6 }}
+                      className={`w-8 h-8 ${exp.bgColor} rounded-full border-4 border-slate-900 z-10 flex-shrink-0 hidden md:block shadow-[0_0_15px_rgba(56,189,248,0.5)]`}
+                    />
+                    <motion.div 
+                      className="md:w-1/2 w-full"
+                      whileHover={{ scale: 1.02, rotateY: 3 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    >
+                      <GlassmorphismCard className="p-6 shadow-lg shadow-sky-500/5 group-hover:shadow-sky-500/20 transition-shadow duration-300">
+                        <div className="flex items-center gap-4 mb-5">
+                          <div className={`p-2.5 rounded-xl border border-current opacity-70 ${exp.color}`}>
+                            <exp.icon className="w-5 h-5 bg-transparent" />
+                          </div>
                           <h3 className="text-xl font-bold text-white">{exp.role}</h3>
                         </div>
                         <p className={`${exp.color} font-semibold mb-2`}>{exp.company}</p>
-                        <p className="text-gray-400 text-sm mb-4">{exp.duration}</p>
-                        <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                        <p className="text-slate-400 text-sm mb-4">{exp.duration}</p>
+                        <p className="text-slate-300 leading-relaxed">{exp.description}</p>
                       </GlassmorphismCard>
-                    </div>
+                    </motion.div>
                   </>
                 )}
-              </div>
+              </motion.div>
             );
           })}
         </div>
