@@ -22,7 +22,7 @@ const Skills = () => {
     {
       title: "Programming Languages",
       icon: <Terminal className="w-8 h-8 text-lime-300" />,
-      skills: ["C++", "Python", "JavaScript", "Java(Basics)"],
+      skills: ["C++", "Python", "JavaScript"],
       color: "from-lime-500 to-emerald-500",
       shadow: "shadow-[0_0_15px_rgba(132,204,22,0.4)]"
     },

@@ -36,27 +36,26 @@ const projects = [
     github: "https://github.com/PrachiSukreSS/Gitlab_tut",
   },
   {
-    title: "TerraformVault",
-    description: "Cloud infrastructure provisioning system using Terraform and OpenTofu, featuring automated state management and security group configurations.",
-    tech: ["Terraform", "AWS", "OpenTofu"],
+    title: "AI-Native Dev OS",
+    description: "On-device AI system using a quantized LLM for debugging, code understanding, and log analysis. Includes a permission-controlled layer for secure and private execution.",
+    tech: ["LLM", "On-device AI", "Security"],
     icon: <Cloud className="w-5 h-5" />,
     accent: "#3b82f6",
-    github: "https://github.com/PrachiSukreSS/TerraformVault",
+    github: "https://github.com/PrachiSukreSS/EDI_Project.git",
   },
   {
-    title: "AuthGuard Pro",
-    description: "Robust authentication and authorization microservice built with FastAPI, implementing OAuth2 and JWT for secure cross-platform communication.",
-    tech: ["FastAPI", "OAuth2", "JWT"],
+    title: "PeerHeal",
+    description: "Mental health platform enabling anonymous peer support, real-time chat, and AI-based assistance. Focused on creating a safe and accessible support environment.",
+    tech: ["React", "Supabase", "AI"],
     icon: <Shield className="w-5 h-5" />,
     accent: "#f97316",
-    github: "https://github.com/PrachiSukreSS/AuthGuard-Pro",
+    github: "https://github.com/PrachiSukreSS/PeerHealApp",
   },
 ];
-
 const Projects = () => (
   <section id="projects" className="py-20 px-4 relative overflow-hidden">
     {/* Background accent */}
-    <div className="absolute top-1/2 left-0 w-[700px] h-[700px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+    <div className="absolute top-1/2 left-0 w-[700px] h-[700px] bg-blue-600/6 blur-[120px] rounded-full pointer-events-none" />
     <div className="max-w-6xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
@@ -98,7 +97,7 @@ const Projects = () => (
                 {/* Header row */}
                 <div className="flex items-center gap-3">
                   <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 text-white"
+                    className="w-11 h-11 rounded-lg flex items-center justify-center flex-shrink-0 text-white"
                     style={{ background: `${project.accent}22`, border: `1px solid ${project.accent}44`, color: project.accent }}
                   >
                     {project.icon}

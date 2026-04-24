@@ -23,7 +23,7 @@ const experiences = [
     bgColor: "bg-teal-400"
   },
   {
-    role: "DevOps Lead",
+    role: "DevOps Team Member",
     company: "Coding Club, RSCOE",
     duration: "Aug 2025 - Present",
     description: "Set up CI/CD pipelines to automate build and deployment workflows. Wrote Python automation scripts for operational tasks and system monitoring. Managed Linux environments and version control using Git.",
