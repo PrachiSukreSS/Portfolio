@@ -8,7 +8,7 @@ const Navigation = () => {
   const navItems = ["Home", "About", "Experience", "Projects", "Skills", "Contact"];
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -43,11 +43,11 @@ const Navigation = () => {
             </div>
           </button>
         </div>
-        
+
         {/* Mobile Nav Dropdown */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -59,8 +59,8 @@ const Navigation = () => {
                     key={item}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
-                        scrollToSection(item.toLowerCase());
-                        setIsMenuOpen(false);
+                      scrollToSection(item.toLowerCase());
+                      setIsMenuOpen(false);
                     }}
                     className="block w-full text-left px-4 py-3 rounded-xl text-slate-300 hover:bg-sky-500/20 hover:text-sky-300 transition-colors duration-300 font-medium"
                   >
