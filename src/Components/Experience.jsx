@@ -1,17 +1,17 @@
 import React from "react";
-import { Code, Users, Server, Briefcase } from "lucide-react";
+import { Code, Server, Briefcase } from "lucide-react";
 import GlassmorphismCard from "../Components/GlassmorphismCard";
 import { motion } from "framer-motion";
 
 const experiences = [
   {
-    role: "Web Team Member",
+    role: "Automation Lead",
     company: "Coding Club, RSCOE",
-    duration: "Oct 2024 - Dec 2025",
-    description: "Contributed to development of coding club website using React and REST APIs with a space-themed UI. Assisted in developing an admin panel and integrating APIs.",
-    icon: Code,
-    color: "text-emerald-400",
-    bgColor: "bg-emerald-400"
+    duration: "Aug 2025 - Present",
+    description: "Set up CI/CD pipelines to automate build and deployment workflows. Wrote Python automation scripts for operational tasks and system monitoring. Managed Linux environments and version control using Git.",
+    icon: Server,
+    color: "text-blue-400",
+    bgColor: "bg-blue-400"
   },
   {
     role: "Full Stack Developer Intern",
@@ -23,25 +23,14 @@ const experiences = [
     bgColor: "bg-teal-400"
   },
   {
-    role: "DevOps Team Member",
+    role: "Web Team Member",
     company: "Coding Club, RSCOE",
-    duration: "Aug 2025 - Present",
-    description: "Set up CI/CD pipelines to automate build and deployment workflows. Wrote Python automation scripts for operational tasks and system monitoring. Managed Linux environments and version control using Git.",
-    icon: Server,
-    color: "text-blue-400",
-    bgColor: "bg-blue-400"
+    duration: "Oct 2024 - Dec 2025",
+    description: "Contributed to development of the coding club website using React and REST APIs.",
+    icon: Code,
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-400"
   }
-  /* {
-     role: "Event Management Team",
-     company: "Coding Club, RSCOE",
-     duration: "Jul 2024 - Oct 2024",
-     description: "Worked on an automation project for checking location availability for conducting events. Streamlined event management processes and improved operational efficiency.",
-     icon: Users,
-     color: "text-slate-400",
-     bgColor: "bg-slate-400"
-   }
- 
- */
 ];
 const Experience = () => (
   <section id="experience" className="py-20 px-4 relative overflow-hidden">
