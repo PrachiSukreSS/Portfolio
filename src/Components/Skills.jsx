@@ -1,51 +1,37 @@
 import React from "react";
-import { Code, Database, Zap, Terminal, Server, Layers, Wrench } from "lucide-react";
+import { Code, Terminal, Layers, Brain } from "lucide-react";
 import GlassmorphismCard from "../Components/GlassmorphismCard";
 import { motion } from "framer-motion";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
-      icon: <Code className="w-8 h-8 text-sky-300" />,
-      skills: ["HTML", "CSS", "JavaScript", "React.js", "TailwindCSS"],
-      color: "from-sky-500 to-blue-500",
-      shadow: "shadow-[0_0_15px_rgba(14,165,233,0.4)]"
-    },
-    {
-      title: "Backend Development",
-      icon: <Server className="w-8 h-8 text-amber-300" />,
-      skills: ["Node.js", "FastAPI", "Django", "Express.js"],
-      color: "from-amber-500 to-orange-500",
-      shadow: "shadow-[0_0_15px_rgba(245,158,11,0.4)]"
-    },
-    {
-      title: "Programming Languages",
+      title: "Languages",
       icon: <Terminal className="w-8 h-8 text-lime-300" />,
-      skills: ["C++", "Python", "JavaScript"],
+      skills: ["Python", "C++", "SQL"],
       color: "from-lime-500 to-emerald-500",
       shadow: "shadow-[0_0_15px_rgba(132,204,22,0.4)]"
     },
     {
-      title: "Database",
-      icon: <Database className="w-8 h-8 text-violet-300" />,
-      skills: ["MySQL", "MongoDB", "PostgreSQL", "Supabase"],
+      title: "Development",
+      icon: <Code className="w-8 h-8 text-sky-300" />,
+      skills: ["MERN Stack", "FastAPI", "REST APIs", "MongoDB", "MySQL", "Git", "GitHub", "Postman"],
+      color: "from-sky-500 to-blue-500",
+      shadow: "shadow-[0_0_15px_rgba(14,165,233,0.4)]"
+    },
+    {
+      title: "AI / GenAI",
+      icon: <Brain className="w-8 h-8 text-violet-300" />,
+      skills: ["Generative AI", "LLMs", "RAG", "Agentic AI", "LangChain", "LangGraph", "Gemini", "Llama", "Vector Databases"],
       color: "from-violet-500 to-purple-600",
       shadow: "shadow-[0_0_15px_rgba(139,92,246,0.4)]"
     },
     {
-      title: "DevOps & Automation",
+      title: "DevOps & Cloud",
       icon: <Layers className="w-8 h-8 text-teal-300" />,
-      skills: ["Docker", "Linux", "GitLab", "Jenkins", "Kubernetes"],
+      skills: ["Linux", "Red Hat", "Docker", "CI/CD", "GitHub Actions", "AWS", "Deployment", "Python Automation", "n8n"],
       color: "from-teal-500 to-cyan-500",
       shadow: "shadow-[0_0_15px_rgba(20,184,166,0.4)]"
-    },
-    {
-      title: "Tools",
-      icon: <Wrench className="w-8 h-8 text-rose-300" />,
-      skills: ["n8n", "GitHub", "Postman", "VS Code"],
-      color: "from-rose-500 to-pink-500",
-      shadow: "shadow-[0_0_15px_rgba(244,63,94,0.4)]"
     },
   ];
 
@@ -63,7 +49,7 @@ const Skills = () => {
           Technical Skills
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}

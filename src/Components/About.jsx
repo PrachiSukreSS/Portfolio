@@ -38,21 +38,21 @@ const About = () => (
               </div>
               <div className="text-center xl:text-left mt-2 xl:mt-4">
                 <h3 className="text-3xl font-black text-white mb-2 leading-tight">My Journey</h3>
-                <p className="text-sky-400 font-bold tracking-widest text-sm uppercase px-1">DevOps & Full Stack Enthusiast</p>
+                <p className="text-sky-400 font-bold tracking-widest text-sm uppercase px-1">Full Stack, AI & DevOps</p>
               </div>
             </div>
 
             <p className="text-slate-300 leading-loose mb-6 font-medium">
-              I'm a Computer Engineering student at JSPM's Rajarshi Shahu College
-              of Engineering, Pune, with a strong passion for web development, DevOps, and
-              automation. With a CGPA of 9.38, I'm actively involved in
-              college-level coding initiatives and team-based projects.
+              I'm a Computer Engineering undergraduate at JSPM's Rajarshi Shahu College
+              of Engineering, Pune (CGPA 9.38), with experience building full-stack
+              applications, REST APIs, and automation solutions. I currently lead
+              automation for the Coding Club at RSCOE.
             </p>
             <p className="text-slate-300 leading-loose mb-8 font-medium">
-              I'm always curious to explore new ideas, improve my skills, and
-              build things that solve real problems. My experience spans from
-              frontend development with React.js to full-stack applications using
-              the MERN stack.
+              I'm especially interested in AI/LLM-powered applications — RAG, agentic
+              workflows with LangChain and LangGraph, and local LLMs — along with
+              modern development workflows using Python, Docker, Linux, CI/CD, and
+              cloud technologies.
             </p>
             <div className="flex flex-wrap gap-2">
               {[
@@ -92,9 +92,19 @@ const About = () => (
             <p className="text-slate-300">
               JSPM's Rajarshi Shahu College of Engineering, Pune
             </p>
-            <p className="text-sky-400 font-semibold tracking-wide">
-              CGPA: 9.38 | 2023-2027
+            <p className="text-sky-400 font-semibold tracking-wide mb-4">
+              CGPA: 9.38 | 2023 – 2027
             </p>
+            <div className="space-y-2 pt-4 border-t border-slate-700/50 text-sm">
+              <div className="flex justify-between gap-4">
+                <span className="text-slate-300">Class XII — Vidyadham Junior College, Pune</span>
+                <span className="text-sky-300 font-semibold whitespace-nowrap">79.50% | 2021 – 2023</span>
+              </div>
+              <div className="flex justify-between gap-4">
+                <span className="text-slate-300">Class X — SPJE School, Pabal</span>
+                <span className="text-sky-300 font-semibold whitespace-nowrap">91% | 2021</span>
+              </div>
+            </div>
           </GlassmorphismCard>
 
           <GlassmorphismCard className="p-6">
@@ -127,16 +137,16 @@ const About = () => (
                 <Award className="w-8 h-8 text-rose-400" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Achievements</h3>
-                <p className="text-rose-200/80">Recognition & Certifications</p>
+                <h3 className="text-xl font-bold text-white">Certifications</h3>
+                <p className="text-rose-200/80">Industry Credentials</p>
               </div>
             </div>
             <ul className="space-y-3 mt-4">
               {[
-                "Aviatrix Certified Multicloud Network Associate",
-                "LFEL1009: Getting Started with OpenTofu",
+                "Red Hat Certified System Administrator (RHCSA)",
+                "Aviatrix Multi-Cloud Network Associate",
                 "JLPT N5 Certified",
-                "SKF Scholar Recipient"
+                "NASSCOM – Linux for Datacenters"
               ].map((achievement, i) => (
                 <li key={i} className="flex items-start gap-3 group/item">
                   <div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(251,113,133,0.6)] group-hover/item:scale-125 transition-transform" />

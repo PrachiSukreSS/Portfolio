@@ -1,55 +1,31 @@
 import React from "react";
-import { Zap, Mail, Code, ExternalLink, Github, Cloud, Shield } from "lucide-react";
+import { Zap, Cpu, CalendarCheck, Github } from "lucide-react";
 import { motion } from "framer-motion";
 
 const projects = [
   {
     title: "PathGenie",
-    description: "Full-stack learning platform that generates personalized learning paths with automated skill analysis. Built using FastAPI backend and MongoDB integration.",
-    tech: ["React", "FastAPI", "MongoDB"],
+    description: "An AI-powered learning platform that generates personalized learning paths based on user skills and goals. Built FastAPI APIs with MongoDB and implemented RAG using LangChain and LangGraph, integrating Groq API for LLM-powered recommendations and resource retrieval.",
+    tech: ["React", "FastAPI", "MongoDB", "LangChain", "LangGraph", "RAG"],
     icon: <Zap className="w-5 h-5" />,
     accent: "#0ea5e9",
     github: "https://github.com/PrachiSukreSS/Path-Gienie",
   },
   {
-    title: "MailOrchestrator",
-    description: "Scalable email and certificate automation engine with intelligent batching, retry logic, and robust error handling for efficient bulk communication.",
-    tech: ["Python", "SMTP", "Automation"],
-    icon: <Mail className="w-5 h-5" />,
-    accent: "#6366f1",
-    github: "https://github.com/PrachiSukreSS/Email-Automation-website",
-  },
-  {
-    title: "LabSense AI",
-    description: "Smart lab scheduling and conflict detection system with FastAPI backend, enabling automated availability checks and efficient time-slot management.",
-    tech: ["Python", "FastAPI", "APIs"],
-    icon: <Code className="w-5 h-5" />,
+    title: "NymOS",
+    description: "A privacy-focused local AI desktop environment powered by quantized LLMs and llama.cpp for system monitoring, file operations, and knowledge retrieval. Built Python-based agent workflows and FastAPI services with permission-controlled command execution, sandboxing, and audit logging for secure AI-driven system interaction.",
+    tech: ["Python", "FastAPI", "llama.cpp", "LLMs", "Linux", "Docker"],
+    icon: <Cpu className="w-5 h-5" />,
     accent: "#a855f7",
-    github: "https://github.com/PrachiSukreSS/labs_data_checkd",
+    github: "https://github.com/PrachiSukreSS/EDI_Project",
   },
   {
-    title: "CodePipelineX",
-    description: "Flask-based web application with integrated GitLab CI/CD pipeline, enabling automated deployment, version control, and seamless development workflows.",
-    tech: ["Flask", "GitLab CI/CD", "Render"],
-    icon: <ExternalLink className="w-5 h-5" />,
+    title: "Lab Availability Check System",
+    description: "An automated lab scheduling system to identify available labs and time slots for technical events. Implemented real-time availability checks, time-slot validation, and conflict detection to prevent overlapping bookings, reducing manual coordination in event scheduling workflows.",
+    tech: ["Python", "FastAPI"],
+    icon: <CalendarCheck className="w-5 h-5" />,
     accent: "#10b981",
-    github: "https://github.com/PrachiSukreSS/Gitlab_tut",
-  },
-  {
-    title: "AI-Native Dev OS",
-    description: "On-device AI system using a quantized LLM for debugging, code understanding, and log analysis. Includes a permission-controlled layer for secure and private execution.",
-    tech: ["LLM", "On-device AI", "Security"],
-    icon: <Cloud className="w-5 h-5" />,
-    accent: "#3b82f6",
-    github: "https://github.com/PrachiSukreSS/EDI_Project.git",
-  },
-  {
-    title: "PeerHeal",
-    description: "Mental health platform enabling anonymous peer support, real-time chat, and AI-based assistance. Focused on creating a safe and accessible support environment.",
-    tech: ["React", "Supabase", "AI"],
-    icon: <Shield className="w-5 h-5" />,
-    accent: "#f97316",
-    github: "https://github.com/PrachiSukreSS/PeerHealApp",
+    github: "https://github.com/PrachiSukreSS/labs_data_checkd",
   },
 ];
 const Projects = () => (
@@ -72,10 +48,10 @@ const Projects = () => (
         transition={{ delay: 0.1 }}
         className="text-center text-slate-400 mb-12 text-base"
       >
-        A selection of things I've built — from automation tools to cloud infrastructure.
+        A selection of things I've built — from AI-powered platforms to automation tools.
       </motion.p>
 
-      <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <motion.div
             key={index}

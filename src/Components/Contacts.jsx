@@ -1,6 +1,6 @@
 // 📁 Contact.jsx
 import React, { useState } from "react";
-import { Mail, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Github } from "lucide-react";
 import GlassmorphismCard from "../Components/GlassmorphismCard";
 import { motion } from "framer-motion";
 
@@ -85,9 +85,21 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400">Email</p>
-                  <p className="text-white font-semibold">
+                  <a href="mailto:prachisukre@gmail.com" className="text-white font-semibold hover:text-indigo-300 transition">
                     prachisukre@gmail.com
-                  </p>
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-indigo-300" />
+                </div>
+                <div>
+                  <p className="text-gray-400">Phone</p>
+                  <a href="tel:+919960196774" className="text-white font-semibold hover:text-indigo-300 transition">
+                    +91 9960196774
+                  </a>
                 </div>
               </div>
 

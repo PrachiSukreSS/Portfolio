@@ -32,6 +32,8 @@ const FloatingOrb = ({ style, color }) => (
   />
 );
 
+const coreTech = ["Python", "FastAPI", "React", "MongoDB", "LangChain", "LangGraph", "LLMs", "Docker", "Linux", "GitHub Actions", "AWS", "n8n"];
+
 const Hero = () => (
   <section
     id="home"
@@ -74,16 +76,16 @@ const Hero = () => (
           text={
             <p className="text-lg md:text-2xl mb-10 font-bold tracking-tight text-slate-200">
               Computer Engineering Student{" "}
-              <span className="text-indigo-400">|</span> DevOps &amp; Full Stack
+              <span className="text-indigo-400">|</span> Full Stack, AI &amp; DevOps
             </p>
           }
         />
         <AnimatedText
           text={
             <p className="text-base md:text-lg mb-12 max-w-2xl mx-auto leading-loose text-slate-400 font-medium">
-              Passionate about turning ideas into clean and impactful web solutions, exploring automation, and building smooth,
-              reliable CI/CD workflows. Curious by nature and always excited to learn, experiment, and create real-world
-              applications that actually make a difference.
+              Computer Engineering undergraduate with experience in building full-stack applications, REST APIs, and automation
+              solutions, with an interest in AI/LLM-powered applications and modern development workflows. Skilled in Python,
+              Docker, Linux, CI/CD, and cloud technologies.
             </p>
           }
         />
@@ -133,8 +135,7 @@ const Hero = () => (
             transition={{ ease: "linear", duration: 22, repeat: Infinity, repeatType: "loop" }}
             className="flex whitespace-nowrap gap-10 text-slate-500 font-semibold text-base px-6 w-max"
           >
-            {["Javascript", "React", "Node.js", "Express", "MongoDB", "AWS", "Docker", "Kubernetes", " Django", "Jenkins", "Python",
-              "Javascript", "React", "Node.js", "Express", "MongoDB", "AWS", "Docker", "Kubernetes", " Django", "Jenkins", "Python"].map((tech, i) => (
+            {[...coreTech, ...coreTech].map((tech, i) => (
                 <span key={i} className="hover:text-slate-300 transition-colors duration-300 cursor-default">{tech}</span>
               ))}
           </motion.div>
@@ -151,9 +152,9 @@ const Hero = () => (
         >
           {[
             { label: "CGPA", value: "9.38" },
-            { label: "Cloud Certs", value: "2" },
-            { label: "Projects", value: "10+" },
-            { label: "Languages", value: "4" }
+            { label: "Certifications", value: "4" },
+            { label: "Roles", value: "3" },
+            { label: "Key Projects", value: "3" }
           ].map((stat, i) => (
             <div key={i} className="text-center p-3 rounded-2xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-sm">
               <h4 className="text-2xl font-black text-sky-300">{stat.value}</h4>
